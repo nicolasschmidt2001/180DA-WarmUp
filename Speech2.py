@@ -1,10 +1,11 @@
 import speech_recognition as sr  
-
+import time
+start = time.time()
 # get audio from the microphone                                                                       
 while True:
     r = sr.Recognizer()                                                                                   
     with sr.Microphone() as source:                                                                       
-        print("Speak:")                                                                                   
+        print(time.time()-start)                                                                                   
         audio = r.listen(source)   
 
     try:
